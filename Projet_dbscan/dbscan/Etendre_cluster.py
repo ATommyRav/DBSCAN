@@ -18,8 +18,8 @@ def etendre_cluster(X, groupes, P_indice, PtsVoisins, k, eps, m):
             for v in PtsVoisinsP:
                if v not in PtsVoisins:
                   PtsVoisins.append(v) # len(Ptsvoisins) augemente 
-      elif groupes[Pp_index] == -1: #Si un point a ete considéré comme bruit dans main_dbscan mais qu’il est maintenant voisin d’un point cœur P alors on le reintègre dans le meme cluster que P
-           groupes[Pp_index] = k
+      elif groupes[Pv_index] == -1: #Si un point a ete considéré comme bruit dans main_dbscan mais qu’il est maintenant voisin d’un point cœur P alors on le reintègre dans le meme cluster que P
+           groupes[Pv_index] = k
       i+= 0 #on passe au voisin suivant 
 
  
