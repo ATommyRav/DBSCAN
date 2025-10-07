@@ -24,12 +24,13 @@ def dbscan(X, minpts, epsilon):
     for i in range(len(X)):
         #PtsVoisins est l'ensemble des indices des points qui sont de le vosinage de X[i]
         PtsVoisins = Voisinage(X, X[i], epsilon)
-        if len(PtsVoisins) >= minpts and groupes[i] == 0 :
-            k += 1 #on ajoute un indice de clusteur des qu'un points core n'est dans aucun clusteur(pas encore visité)
-            etendre_cluster(X, groupes, i, PtsVoisins, k, epsilon, minpts)#cherche et donne le clusteur contenant X[i] en modifiant groupes
-        elif len(PtsVoisins) < minpts :
-            groupes[i] = -1 #si ce n'est pas un point core le point est juste marqué comme visité(temporairement un bruit)
-          
+        if groupes[i] == 0 :
+            if len(PtsVoisins) >= minpts :
+                k += 1 #on ajoute un indice de clusteur des qu'un points core n'est dans aucun clusteur(pas encore visité)
+                etendre_cluster(X, groupes, i, PtsVoisins, k, epsilon, minpts)#cherche et donne le clusteur contenant X[i] en modifiant groupes
+            elif len(PtsVoisins) < minpts :
+                groupes[i] = -1 #si ce n'est pas un point core le point est juste marqué comme visité(temporairement un bruit)
+                
     return groupes
 
 class mydbscan:
