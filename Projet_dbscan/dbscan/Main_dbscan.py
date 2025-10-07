@@ -1,6 +1,7 @@
 from Etendre_cluster import etendre_cluster
 from Distance import distance_euclidienne as distance
-from Voisinage import Voisinage 
+from Voisinage import Voisinage
+import numpy as np
 
 def dbscan(X, minpts, epsilon):
     """X: la donnée,
