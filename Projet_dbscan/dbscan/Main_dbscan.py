@@ -38,11 +38,13 @@ class mydbscan:
         self.epsilon = epsilon
         self.cluster = None
         self.bruits = None
+        self.id_cluster = None
       
     #la donnéd X a été nommé Donnee pour moin de confusion.
     #methodes qui crée la liste crée modifie la liste des clusteur et bruits,elle ne retourne rien
     def fit(self,Donnee):      
         indice_cluster = dbscan(Donnee,self.minpts,self.epsilon)
+        self.id_cluster = indice_cluster
       
         #initialisation de la liste des clusteurs ayant pour taille l'indice maximal des clusteur
         max_indice = max(indice_cluster)
@@ -63,7 +65,6 @@ class mydbscan:
                 (self.bruits).append(Donnee[i]) #le point devient un bruit 
               
 #exemple d'utilisation:
-#import numpy as np
 #projet = mydbscan(5,1)
 #X = np.random.randn(50,3)
 #projet.fit(X)
