@@ -3,6 +3,34 @@ from Distance import distance_euclidienne as distance
 from Voisinage import Voisinage
 import numpy as np
 
+try:#scipy est optionnel pour que le code puisse fonctionner meme sans scipy si la donnée n'est pas un sparse
+    from scipy.sparse import issparse
+except ImportError:
+    # Définir une fonction pour éviter les erreurs avant la vérification
+    def issparse(X):
+        return False
+        
+def normaliser_data(X):
+    """fonction qui converti les donnés entre en données compatibles avec notre aogorithme dbscn"""
+    if issparse(X):#verifie si c'est un sparse
+        X = X.toarray()
+        
+    else:
+        try:
+            if hasattr(X,"values"):
+                X = np.asarray(X.values)
+            else:
+                X = np.array(X)
+        except Exception as e:
+            print("Erreur :", e)
+            print("essayez d'installee scipy pour regler l'erreur")
+
+    # S'assurer que X est bien de la forme liste de liste
+    if X.ndim == 1:
+        X = X.reshape(-1, 1)
+    return X
+   
+
 def dbscan(X, minpts, epsilon):
     """X: la donnée,
     minpts: nb de points minimum,
@@ -43,7 +71,8 @@ class mydbscan:
       
     #la donnéd X a été nommé Donnee pour moin de confusion.
     #methodes qui crée la liste crée modifie la liste des clusteur et bruits,elle ne retourne rien
-    def fit(self,Donnee):      
+    def fit(self,Donnee):  
+        Donnee = normaliser_data(Donnee)
         indice_cluster = dbscan(Donnee,self.minpts,self.epsilon)
         self.id_cluster = indice_cluster
       
