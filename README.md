@@ -33,14 +33,17 @@ Le but de ce projet est d’apprendre à :
 
 ## Guide d'installation
 
- **-Préréquis**: Avant d’installer le projet, assurez-vous d’avoir :
-                   - Python 3.6 ou supérieur installé.
-                   - pip pour installer les packages Python. 
+ **- Préréquis** :
+ Avant d’installer le projet, assurez-vous d’avoir :
+   
+   - Python 3.6 ou supérieur installé.
+   
+   - pip pour installer les packages Python. 
 
-**Cloner le dépôt**
+**- Cloner le dépôt**
 
 ```bash
-git clone https://github.com/
+git clone https://github.com/ProjetDbscan/DBSCAN.git
 cd Projet_DBSCAN
 
 ```
