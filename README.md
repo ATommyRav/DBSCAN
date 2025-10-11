@@ -44,7 +44,7 @@ Le but de ce projet est d’apprendre à :
 
 ```bash
 git clone https://github.com/ProjetDbscan/DBSCAN.git
-cd Projet_DBSCAN
+
 
 ```
 ## Exemple d’utilisation
