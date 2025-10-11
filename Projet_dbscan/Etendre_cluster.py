@@ -1,4 +1,4 @@
-from Voisinage import Voisinage
+from .Voisinage import Voisinage
 def etendre_cluster(X, groupes, P_indice, PtsVoisins, k, eps, m):
 # X : c'est l'ensemble des points [X1,X2,...,Xn] avec X1 appartenant a R^d
 #  groupes (list[int]) : pour identifier chaque point (si =0 : non visité, si =-1: bruit, si  >0 : cluster), cette marquage se fait dans main_dbscan.
