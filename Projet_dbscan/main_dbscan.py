@@ -1,6 +1,6 @@
-from Etendre_cluster import etendre_cluster
-from Distance import distance_euclidienne as distance
-from Voisinage import Voisinage
+from .Etendre_cluster import etendre_cluster
+from .Distance import distance_euclidienne as distance
+from .Voisinage import Voisinage
 import numpy as np
 
 try:#scipy est optionnel pour que le code puisse fonctionner meme sans scipy si la donnée n'est pas un sparse
