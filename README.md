@@ -1,7 +1,7 @@
 #  Projet_dbscan
 
 **Projet_dbscan** est une bibliothèque Python qui implémente l’algorithme **DBSCAN (Density-Based Spatial Clustering of Applications with Noise)**.  
-Elle permet de regrouper des données selon leur densité, **sans spécifier le nombre de clusters à l’avance**.  
+Ce projet permet de regrouper des points de données en clusters sans utiliser de bibliothèque de machine learning comme scikit-learn.  
 
 ---
 
@@ -31,6 +31,19 @@ Le but de ce projet est d’apprendre à :
 
 - **main_dbscan.py**: C’est le fichier principal de la librairie, celui qui contient la classe **mydbscan**. C’est cette classe que l’utilisateur importe et utilise directement. Fournit la méthode principale fit(X) pour traiter les données.
 
+## Guide d'installation
+
+ **-Préréquis**: Avant d’installer le projet, assurez-vous d’avoir :
+                   - Python 3.6 ou supérieur installé.
+                   - pip pour installer les packages Python. 
+
+**Cloner le dépôt**
+
+```bash
+git clone https://github.com/
+cd Projet_DBSCAN
+
+```
 ## Exemple d’utilisation
 
 ```python
