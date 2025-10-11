@@ -11,7 +11,7 @@ Le but de ce projet est d’apprendre à :
 
 - Implémenter l’algorithme DBSCAN à partir de zéro (sans `scikit-learn`),
 
-- Structurer une bibliothèque Python réutilisable,
+- Structurer une bibliothèque Python réutilisable
 
 - Créer une librairie installable avec `pip`.
 
@@ -21,7 +21,7 @@ Le but de ce projet est d’apprendre à :
 
 - **setup.py** : Ce fichier permet de transformer le dossier en bibliothèque Python installable. Il contient les informations nécessaires à pip pour installer le projet.
 
--  __init__.py  : C’est un fichier obligatoire pour que Python reconnaisse le dossier Projet_dbscan/ comme un package.
+-  `__init__.py ` : C’est un fichier obligatoire pour que Python reconnaisse le dossier Projet_dbscan/ comme un package.
 
 - **Distance.py** : Ce fichier contient la fonction de distance utilisée par DBSCAN.En général, c’est la distance euclidienne, qui mesure à quel point deux points sont proches.
 
