@@ -40,6 +40,11 @@ Le but de ce projet est d’apprendre à :
    
    - pip pour installer les packages Python. 
 
+   - numpy
+
+   - spicy (optionnel)
+
+     
 **- Cloner le dépôt**
 
 ```bash
