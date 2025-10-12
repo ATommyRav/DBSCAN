@@ -45,11 +45,10 @@ Le but de ce projet est d’apprendre à :
 ```bash
 git clone https://github.com/ProjetDbscan/DBSCAN.git
 cd DBSCAN
-
 ```
 
-**- Intallation de bibliothèque**
-```
+**- Intallation de la bibliothèque**
+```bash
 pip install .
 ```
 Cette commande utilise le fichier setup.py pour installer la librairie localement.
@@ -62,7 +61,7 @@ Vous trouverez ci-dessous une exemple simple de comment utiliser la librairie.
 from Projet_dbscan import mydbscan
 import numpy as np
 
-# Jeu de données
+# Données
 X = np.array([
     [1.0, 1.0], [1.1, 1.1], [0.9, 1.2], [1.2, 0.9], [0.8, 1.0],
     [5.0, 5.0], [5.1, 4.9], [4.9, 5.2], [5.2, 5.1], [4.8, 5.0],
