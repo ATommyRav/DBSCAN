@@ -44,9 +44,17 @@ Le but de ce projet est d’apprendre à :
 
 ```bash
 git clone https://github.com/ProjetDbscan/DBSCAN.git
-
+cd DBSCAN
 
 ```
+
+**- Intallation de bibliothèque**
+```
+pip install .
+
+```
+Vous trouverez ci-dessous une exemple simple de comment utiliser la librairie.
+
 ## Exemple d’utilisation
 
 ```python
