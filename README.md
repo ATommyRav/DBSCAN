@@ -52,7 +52,7 @@ cd DBSCAN
 ```
 pip install .
 ```
-# Cette commande utilise le fichier setup.py pour installer la librairie localement.
+Cette commande utilise le fichier setup.py pour installer la librairie localement.
 
 Vous trouverez ci-dessous une exemple simple de comment utiliser la librairie.
 
