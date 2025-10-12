@@ -14,7 +14,7 @@ def etendre_cluster(X, groupes, P_indice, PtsVoisins, k, eps, m):
       if groupes[Pv_indice] == 0: # Si le voisins de P est marqué non visité auparavant alors on le met dans le meme cluster que P 
          groupes[Pv_indice] = k
          PtsVoisinsP = Voisinage(X, X[Pv_indice], eps) #on cherche les voisins de voisin de P
-         if len(PtsVoisinsP) >= m : #Si le  voisin de P  est un point coeur alors il s'ajoutes aussi au cluster 
+         if len(PtsVoisinsP) >= m : #Si le  voisin de P  est un point coeur alors ses voisins s'ajoutent aussi au cluster 
             for v in PtsVoisinsP:
                if v not in PtsVoisins:
                   PtsVoisins.append(v) # len(Ptsvoisins) augmente 
