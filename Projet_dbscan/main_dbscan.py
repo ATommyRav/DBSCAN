@@ -62,7 +62,7 @@ def dbscan(X, minpts, epsilon):
     return groupes
 
 class mydbscan:
-    def __init__(self, minpts, epsilon):
+    def __init__(self, epsilon=0.5,minpts=5):
         self.minpts = minpts
         self.epsilon = epsilon
         self.cluster = None
