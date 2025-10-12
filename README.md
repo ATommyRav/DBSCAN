@@ -42,7 +42,7 @@ Le but de ce projet est d’apprendre à :
 
    - numpy
 
-   - spicy (optionnel)
+   - scipy (optionnel)
 
      
 **- Cloner le dépôt**
